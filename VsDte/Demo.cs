@@ -34,8 +34,8 @@ namespace VsDte
             Directory.CreateDirectory(SolutionDir);
 
             //VS起動
-            string ver = "14";//12にすると2013を操作できるよ！
-            var path = @"C:\Program Files (x86)\Microsoft Visual Studio " + ver + @".0\Common7\IDE\devenv.exe";
+            //パスを書き換えると2013も操作できるよ。
+            var path = @"C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\devenv.exe";
             vsProcess = System.Diagnostics.Process.Start(path);
             while (0 == vsProcess.MainWindowTitle.Length) 
             {
